@@ -249,7 +249,7 @@ def train_models(df):
     lin_reg.fit(X_scaled, y_reg)
 
     # Train Logistic Regression (Risk Classification)
-    log_reg = LogisticRegression(multi_class='multinomial', max_iter=1000)
+    log_reg = LogisticRegression(max_iter=1000)
     log_reg.fit(X_scaled, y_clf)
 
     return lin_reg, log_reg, scaler, le_gender, features
